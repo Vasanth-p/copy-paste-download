@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #101010;
+    color: #ffffff;
+}
+
+.upload-container {
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.dashed-border {
+    border: 2px dashed #ffffff;
+    border-radius: 12px;
+    padding: 140px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s;
+}
+
+.dashed-border.highlight {
+    border-color: #007bff; /* Highlight color */
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+.dashed-border:hover {
+    border-color: #cccccc;
+}
+
+.dashed-border p {
+    margin: 10px 0;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.icons a {
+    color: #ffffff;
+    text-decoration: none; 
+}
+.icon i {
+    font-size: 60px;
+}
+
+.icons i:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+
+button#select-folder {
+    background-color: #424242;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#select-folder:hover {
+    background-color: #007bff;
+}
+
+.instructions {
+    font-size: 14px;
+    color: #cccccc;
+    margin-top: 20px;
+}
+
+.success-message {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tick-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.icons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Add styles for error message and image preview */
+
+.error-message {
+    display: none;
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#image-preview {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#preview-img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+}
+#base-name {
+    margin-left: 10px;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    font-size: 14px;
+    display: inline-block;
+}
+
+
+.error-message {
+    display: none;
+    color: #ff4d4d; /* Red color for error */
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+    h1{
+        font-size: 28px;
+    }
+    .upload-container {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .dashed-border {
+        padding: 100px; /* Adjust padding for better fit */
+    }
+
+    .dashed-border p {
+        font-size: 14px; /* Smaller font for instructions */
+    }
+
+    .icon i {
+        font-size: 50px; /* Resize icons for smaller screens */
+    }
+
+    button#select-folder {
+        margin: 10px;
+        padding: 8px 15px; /* Adjust button size */
+        font-size: 14px; /* Smaller font for buttons */
+    }
+
+    .instructions {
+        font-size: 12px; /* Adjust instruction font size */
+    }
+
+    .error-message, .success-message {
+        font-size: 12px; /* Adjust message font size */
+    }
+
+    #base-name {
+        margin-top: 10px;
+        font-size: 12px; /* Adjust input box font size */
+    }
+   
+    .icons {
+        gap: 10px; /* Reduce gap between icons */
+    }
+
+    .icons i {
+        font-size: 24px; /* Resize icons */
+    }
+}
+
+/* Styles for very small screens (mobile-first design) */
+@media (max-width: 480px) {
+    h1{
+        font-size:medium;
+    }
+    .dashed-border {
+        padding: 120px 80px;
+        margin: 10px;
+         /* Further reduce padding */
+    }
+
+    .icon i {
+        font-size: 40px; /* Smaller icon for mobile */
+    }
+
+    button#select-folder {
+        padding: 8px 10px;
+        font-size: 12px;
+        margin: 10px;
+    }
+
+    .instructions {
+        font-size: 10px;
+    }
+
+    .icons i {
+        font-size: 20px;
+    }
+}
